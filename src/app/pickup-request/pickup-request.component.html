@@ -1,0 +1,20 @@
+<div>
+  <mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="dropInformationGroup">
+      <ng-template matStepLabel>Step 1</ng-template>
+      <app-drop-information [pickupRequest] = "pickupRequest"></app-drop-information>
+    </mat-step>
+    <mat-step [stepControl]="truckFormGroup">
+      <ng-template matStepLabel>Step 2</ng-template>
+      <app-truck-information [pickupRequest] = "pickupRequest"></app-truck-information>
+    </mat-step>
+    <mat-step [stepControl]="contactInfoFormGroup">
+      <ng-template matStepLabel>Step 3</ng-template>
+      <app-contact-information [pickupRequest] = "pickupRequest"></app-contact-information>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+      <app-confirmation [pickupRequest] = "pickupRequest"></app-confirmation>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>

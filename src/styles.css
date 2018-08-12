@@ -1,1 +1,133 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+
+.top-header {
+    height: 44px !important;
+    background-color: #5C54CE;
+}
+
+.youqel-topbar {
+    background-color: #706DF9;
+    color: white;
+}
+
+.logo-header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+}
+
+.owl-dt-inline-container .owl-dt-calendar, .owl-dt-popup-container .owl-dt-calendar {
+    height: auto !important;
+}
+
+.youqel-calendar owl-date-time-container {
+    width: 100%;
+}
+
+.youqel-label {
+    color: #858A8B;
+}
+
+.mat-checkbox-layout { 
+    white-space: normal !important; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @media only screen and (max-width: 768px) {
+    * {
+        font-size: 11px;
+    }
+    h2 {
+        font-size: 14px;
+    }
+}  
+
+h2 {
+    color: #273D52;
+    margin-bottom: 10px;
+}
+
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+@media only screen and (min-width: 768px) {
+  .center {
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    }
+}
+
+.input-card {
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+.button-row button, .button-row a {
+    margin-right: 8px;
+
+}
+
+.bg-margin-bottom {
+    margin-bottom: 50px;
+}
+
+.youqel-form {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sm-margin-bottom {
+    margin-bottom: 10px;
+}
+
+.sm-padding-right{
+    padding-right: 10px;
+}
+
+.col-1-4 {
+    width: 25%;
+  }
+
+.col-1-2 {
+    width: 50%;
+  }
+
+.text-align-center {
+    text-align: center;
+}
+
+.mat-horizontal-stepper-header{
+    /* pointer-events: none !important; */
+}
+
+@media (max-width: 600px) {
+    .mat-step-label {
+        font-size: 8px;
+    }
+}
+
+.selected-language{
+    border-bottom: 2px solid white;
+}

@@ -1,0 +1,38 @@
+<div class="center">
+
+  <h2 class="center">
+    {{'DropInformationPage.Title' | translate}}</h2>
+
+  <form #dropInfoForm="ngForm"
+   class="form youqel-form center">
+    <mat-card class="input-card ">
+      <mat-form-field class="full-width">
+        <mat-icon matPrefix class="sm-padding-right" svgIcon="pickup"></mat-icon>
+        <input matInput placeholder="{{'DropInformationPage.PickupPlaceholder' | translate}}" 
+        [(ngModel)]="pickupRequest.pickupLocation" required name="pickupLocation">
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card class="input-card ">
+      <mat-form-field class="full-width">
+        <mat-icon matPrefix class="sm-padding-right" svgIcon="drop_off"></mat-icon>
+        <input matInput placeholder="{{'DropInformationPage.DropoffPlaceholder' | translate}}" 
+        [(ngModel)]="pickupRequest.dropoffLocation" required name="dropoffLocation">
+      </mat-form-field>
+    </mat-card>
+
+    <div class="full-width bg-margin-bottom">
+      <owl-date-time-inline
+      class="youqel-calendar full-width" 
+      required 
+      [(ngModel)]="pickupRequest.pickupDate" name="pickupDate">
+        ></owl-date-time-inline>
+    </div>
+
+    <div class="button-row">
+      <button mat-raised-button matStepperNext [disabled]="!dropInfoForm.valid" color="primary">
+        {{'DropInformationPage.ButtonPlaceholder' | translate}}</button>
+    </div>
+
+  </form>
+</div>

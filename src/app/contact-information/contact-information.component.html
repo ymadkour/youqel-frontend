@@ -1,0 +1,91 @@
+<div class="center">
+
+  <h2 class="center">
+    {{'ContactInformationPage.Title' | translate}}</h2>
+
+  <form #contactInfoForm="ngForm" class="form youqel-form center">
+
+    <div class="contact-information-container ">
+      <div class="title-container">
+        <span class="sm-padding-right">
+          <div class="header-label-prefix">1</div>
+        </span>
+        <b>{{'ContactInformationPage.Shipper' | translate}} </b>{{'ContactInformationPage.ContactInformation' | translate}}</div>
+      <mat-card class="input-card ">
+        <mat-form-field class="full-width">
+          <mat-icon matPrefix class="sm-padding-right">person</mat-icon>
+          <input matInput [(ngModel)]="pickupRequest.shipper.name" name="shipperName" 
+          required 
+          placeholder="{{'ContactInformationPage.ShipperNamePlaceholder' | translate}}">
+        </mat-form-field>
+      </mat-card>
+
+      <mat-card class="input-card ">
+        <mat-form-field class="full-width">
+          <mat-icon matPrefix class="sm-padding-right">phone</mat-icon>
+          <span matPrefix>+2 &nbsp;</span>
+          <input type="tel" matInput [(ngModel)]="pickupRequest.shipper.mobile" 
+          name="shipperMobile" required 
+          placeholder="{{'ContactInformationPage.ShipperMobilePlaceholder' | translate}}">
+        </mat-form-field>
+      </mat-card>
+
+      <mat-card class="input-card ">
+        <mat-form-field class="full-width">
+          <mat-icon matPrefix class="sm-padding-right">business</mat-icon>
+          <input matInput [(ngModel)]="pickupRequest.shipper.company" 
+          name="shipperCompanyName" required 
+          placeholder="{{'ContactInformationPage.ShipperCompanyPlaceholder' | translate}}">
+        </mat-form-field>
+      </mat-card>
+    </div>
+
+    <div class="full-width contact-information-container ">
+      <mat-divider></mat-divider>
+    </div>
+
+    <div class="contact-information-container ">
+      <div class="title-container">
+        <span class="sm-padding-right">
+          <div class="header-label-prefix">2</div>
+        </span>
+        <span>
+          <b>{{'ContactInformationPage.Receipient' | translate}} </b>{{'ContactInformationPage.ContactInformation' | translate}}</span>
+      </div>
+      <mat-card class="input-card ">
+        <mat-form-field class="full-width">
+          <mat-icon matPrefix class="sm-padding-right">person</mat-icon>
+          <input matInput [(ngModel)]="pickupRequest.receipient.name" 
+          name="receipientName" required 
+          placeholder="{{'ContactInformationPage.ReceipientNamePlaceholder' | translate}}">
+        </mat-form-field>
+      </mat-card>
+
+      <mat-card class="input-card ">
+        <mat-form-field class="full-width">
+          <mat-icon matPrefix class="sm-padding-right">phone</mat-icon>
+          <span matPrefix>+2 &nbsp;</span>
+          <input type="tel" matInput required [(ngModel)]="pickupRequest.receipient.mobile"
+           name="receipientmobile" 
+           placeholder="{{'ContactInformationPage.ReceipientMobilePlaceholder' | translate}}">
+        </mat-form-field>
+      </mat-card>
+    </div>
+
+    <div class="bg-margin-bottom">
+      <mat-checkbox required [(ngModel)]="pickupRequest.checked" #tc="ngModel" name="tc">
+        <p>
+          {{'ContactInformationPage.ConfirmationText' | translate}}
+        </p>
+      </mat-checkbox>
+    </div>
+
+    <div class="button-row">
+      <button mat-raised-button matStepperPrevious> {{'ContactInformationPage.BackButtonPlaceholder' | translate}}</button>
+
+      <button mat-raised-button matStepperNext [disabled]="!contactInfoForm.valid" 
+      color="primary" (click)="addRequest(pickupRequest)">{{'ContactInformationPage.ButtonPlaceholder' | translate}}</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,18 @@
+.header-label-prefix {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 25px;
+    text-align: center;
+    background: #706DF9;
+    float: left;
+  }
+
+  .title-container {
+    margin-bottom: 30px;
+  }
+
+  .contact-information-container {
+    padding-bottom: 20px;
+  }

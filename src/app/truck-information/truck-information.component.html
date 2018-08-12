@@ -1,0 +1,75 @@
+<div class="center">
+
+  <h2 class="center">
+    {{'TruckInformationPage.Title' | translate}}</h2>
+
+  <form #truckInfoForm="ngForm" class="form youqel-form center">
+
+    <div class="full-width bg-margin-bottom">
+
+        <div class="grid grid-pad">
+            <a *ngFor="let truck of trucks" 
+            (click)="changeSelectedTruck(truck)"
+            class="col-1-2 text-align-center">
+              <div
+              [class]="truck.type ==  selectedTruck.type? 'selected-truck module hero' 
+              : 'module hero not-selected-truck' ">
+                <img class="sm-truck-img" src="{{truck.imagePath}}">
+              </div>
+            </a>
+          </div>
+    </div>
+
+
+    <div class="full-width bg-margin-bottom center">
+
+        <div class="full-width">
+            <img class="bg-truck-img" src="{{selectedTruck.imagePath}}">
+          </div>
+
+    </div>
+
+    <div>
+      <mat-card class="input-card">
+        <mat-form-field class="full-width">
+          <textarea matInput cdkTextareaAutosize 
+          required
+          [(ngModel)]="pickupRequest.details"
+          name="details"
+          placeholder="{{'TruckInformationPage.DetailsPlaceholder' | translate}}"></textarea>
+          <mat-hint align="start">
+            <p>{{'TruckInformationPage.DetailsHint' | translate}}
+            </p>
+          </mat-hint>
+        </mat-form-field>
+      </mat-card>
+    </div>
+
+    <div>
+      <mat-card class="input-card">
+        <div class="price-information-icon-container">
+          <mat-icon class="price-icon">monetization_on</mat-icon>
+        </div>
+        <div class="price-information-text-container">
+            <h4 class="sm-margin-bottom">
+              {{'TruckInformationPage.PriceInfoHeader' | translate}}</h4>
+            <p class="sm-margin-bottom">{{'TruckInformationPage.PriceInfoText' | translate}}</p>
+            <p>
+              <strong>{{'TruckInformationPage.PriceInfoSubtext' | translate}}</strong>
+            </p>
+          </div>
+      </mat-card>
+    </div>
+
+
+    <div class="button-row">
+      
+      <button mat-raised-button matStepperPrevious> {{'TruckInformationPage.BackButtonPlaceholder' | translate}}</button>
+
+      <button mat-raised-button matStepperNext 
+      [disabled]="!truckInfoForm.valid"
+      color="primary">{{'TruckInformationPage.ButtonPlaceholder' | translate}}</button>
+    </div>
+
+  </form>
+</div>

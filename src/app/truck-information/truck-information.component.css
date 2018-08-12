@@ -1,0 +1,96 @@
+.sm-truck-img {
+    width: 67px;
+}
+
+.sm-truck-img-container {
+    border: 1px solid #E5ECED;
+    width: 100px;
+    height: 100px;
+}
+
+.truck-img-container{
+    display: inline-block;
+}
+
+.bg-truck-img {
+    width: 260px;
+}
+
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .grid {
+    margin: 0;
+  }
+  .col-1-4 {
+    width: 25%;
+  }
+  .module {
+    padding: 20px;
+    max-height: 120px;
+    min-width: 120px;
+    background-color: #eee;
+    border-radius: 2px;
+    border: 1px solid #E5ECED;
+  }
+  .module:hover {
+    background-color: white;
+    border-bottom: 4px solid #706DF9;
+    cursor: pointer;
+    opacity: 1;
+  }
+  .not-selected-truck {
+    opacity: 0.6;
+  }
+  .selected-truck {
+    background-color: white;
+    border-bottom: 4px solid #706DF9;
+  }
+
+  .grid-pad {
+    padding: 10px 0;
+  }
+  .grid-pad > [class*='col-']:last-of-type {
+    padding-right: 20px;
+  }
+  @media (max-width: 600px) {
+    .module {
+      font-size: 10px;
+      max-height: 110px; }
+  }
+  @media (max-width: 1024px) {
+    .grid {
+      margin: 0;
+    }
+    .module {
+      min-width: 60px;
+    }
+  }
+
+  .price-information-icon-container {
+    width: 15%;
+    float: left;
+    color: #706DF9;
+  }
+
+  .price-information-text-container {
+    width: 85%;
+    display: inline-block;
+  }
+
+  .price-icon {
+    font-size: 30px;
+  }

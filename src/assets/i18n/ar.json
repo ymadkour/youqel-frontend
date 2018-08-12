@@ -1,0 +1,39 @@
+{
+
+    "DropInformationPage": {
+        "Title": "Book your Truck now AR",
+        "PickupPlaceholder" : "Enter your pickup location",
+        "DropoffPlaceholder": "Enter your dropoff location",
+        "ButtonPlaceholder": "Proceed to truck type selection"
+    },
+    "TruckInformationPage": {
+        "Title": "What type of truck do you need?",
+        "DetailsPlaceholder": "Enter your shipment details",
+        "DetailsHint": "Type of goods to be moved, Estimated weight, Special notes…",
+        "PriceInfoHeader": "Pricing and payment method",
+        "PriceInfoText" : "Cost of transport varies on type of truck and goods and exact quotation will be communicated on phone.",
+        "PriceInfoSubtext" : "Payment is made cash on pickup.",
+        "BackButtonPlaceholder": "Back",
+        "ButtonPlaceholder": "Proceed to contact information"
+    },
+    "ContactInformationPage" : {
+        "Title": "Contact Information",
+        "Shipper": "Shipper",
+        "Receipient": "Receipient",
+        "ContactInformation": "contact information",
+        "ShipperNamePlaceholder": "What's your name?",
+        "ShipperMobilePlaceholder": "What's your mobile number?",
+        "ShipperCompanyPlaceholder": "What's your company name?",
+        "ReceipientNamePlaceholder" : "Receipient's name",
+        "ReceipientMobilePlaceholder" : "Receipient's mobile number",
+        "ConfirmationText": "I confirm that all contact information provided is correct and that I have agreed to the terms and conditions.",
+        "BackButtonPlaceholder": "Back",
+        "ButtonPlaceholder": "Confirm Booking"
+    },
+    "ConfimrationPage" : {
+        "Title": "Booking Confirmation",
+        "Text": "Someone from the Youqel’s booking team will be contacting you shortly.",
+        "Subtext": "Want to talk more?",
+        "CallButtonPlaceholder": "Call +201144229355"
+    }
+}
